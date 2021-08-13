@@ -1,0 +1,138 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "F2837xD" --package "F2837xD_337ZWT" --part "F2837xD_337ZWT" --product "C2000WARE@3.00.00.00"
+ * @versions {"data":"2020090214","timestamp":"2020090214","tool":"1.6.0+1543","templates":"2020090214"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const can    = scripting.addModule("/driverlib/can.js", {}, false);
+const can1   = can.addInstance();
+const epwm   = scripting.addModule("/driverlib/epwm.js", {}, false);
+const epwm1  = epwm.addInstance();
+const epwm2  = epwm.addInstance();
+const epwm3  = epwm.addInstance();
+const epwm4  = epwm.addInstance();
+const gpio   = scripting.addModule("/driverlib/gpio.js", {}, false);
+const gpio1  = gpio.addInstance();
+const gpio2  = gpio.addInstance();
+const gpio3  = gpio.addInstance();
+const gpio4  = gpio.addInstance();
+const gpio5  = gpio.addInstance();
+const gpio6  = gpio.addInstance();
+const gpio7  = gpio.addInstance();
+const gpio8  = gpio.addInstance();
+const gpio9  = gpio.addInstance();
+const gpio10 = gpio.addInstance();
+const gpio11 = gpio.addInstance();
+const gpio12 = gpio.addInstance();
+const gpio13 = gpio.addInstance();
+const gpio14 = gpio.addInstance();
+const gpio15 = gpio.addInstance();
+const gpio16 = gpio.addInstance();
+const gpio17 = gpio.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+can1.$name                = "CAN_BUS";
+can1.bitRate              = 1000000;
+can1.bitTime              = 25;
+can1.can.$assign          = "CANA";
+can1.can.canrxPin.$assign = "GPIO5";
+can1.can.cantxPin.$assign = "GPIO4";
+
+epwm1.$name                 = "PWM_LegC";
+epwm1.epwm.$assign          = "EPWM2";
+epwm1.epwm.epwmaPin.$assign = "GPIO2";
+epwm1.epwm.epwmbPin.$assign = "GPIO3";
+
+epwm2.$name                 = "PWM_LegA";
+epwm2.epwm.$assign          = "EPWM5";
+epwm2.epwm.epwmaPin.$assign = "GPIO8";
+epwm2.epwm.epwmbPin.$assign = "GPIO9";
+
+epwm3.$name                 = "PWM_LegB";
+epwm3.epwm.$assign          = "EPWM6";
+epwm3.epwm.epwmaPin.$assign = "GPIO10";
+epwm3.epwm.epwmbPin.$assign = "GPIO11";
+
+epwm4.$name                 = "ADCSOC";
+epwm4.epwm.$assign          = "EPWM1";
+epwm4.epwm.epwmaPin.$assign = "GPIO0";
+epwm4.epwm.epwmbPin.$assign = "GPIO1";
+
+gpio1.$name           = "PREDC";
+gpio1.direction       = "GPIO_DIR_MODE_OUT";
+gpio1.qualMode        = "GPIO_QUAL_ASYNC";
+gpio1.gpioPin.$assign = "GPIO29";
+
+gpio2.$name           = "CNTCT_DC";
+gpio2.qualMode        = "GPIO_QUAL_ASYNC";
+gpio2.direction       = "GPIO_DIR_MODE_OUT";
+gpio2.gpioPin.$assign = "GPIO125";
+
+gpio3.$name           = "GPR2";
+gpio3.direction       = "GPIO_DIR_MODE_OUT";
+gpio3.qualMode        = "GPIO_QUAL_ASYNC";
+gpio3.gpioPin.$assign = "GPIO124";
+
+gpio4.$name           = "GPR1";
+gpio4.direction       = "GPIO_DIR_MODE_OUT";
+gpio4.qualMode        = "GPIO_QUAL_ASYNC";
+gpio4.gpioPin.$assign = "GPIO59";
+
+gpio5.direction       = "GPIO_DIR_MODE_OUT";
+gpio5.qualMode        = "GPIO_QUAL_ASYNC";
+gpio5.$name           = "CNTCT_AC_PWR";
+gpio5.gpioPin.$assign = "GPIO52";
+
+gpio6.$name           = "GPI1";
+gpio6.qualMode        = "GPIO_QUAL_ASYNC";
+gpio6.gpioPin.$assign = "GPIO32";
+
+gpio7.$name           = "GPI2";
+gpio7.qualMode        = "GPIO_QUAL_ASYNC";
+gpio7.gpioPin.$assign = "GPIO67";
+
+gpio8.$name           = "outputLed_1";
+gpio8.direction       = "GPIO_DIR_MODE_OUT";
+gpio8.gpioPin.$assign = "GPIO64";
+
+gpio9.$name           = "outputLed_2";
+gpio9.direction       = "GPIO_DIR_MODE_OUT";
+gpio9.gpioPin.$assign = "GPIO26";
+
+gpio10.$name           = "outputLed_3";
+gpio10.direction       = "GPIO_DIR_MODE_OUT";
+gpio10.gpioPin.$assign = "GPIO27";
+
+gpio11.$name           = "outputLed_4";
+gpio11.direction       = "GPIO_DIR_MODE_OUT";
+gpio11.gpioPin.$assign = "GPIO25";
+
+gpio12.$name           = "GPI3";
+gpio12.qualMode        = "GPIO_QUAL_ASYNC";
+gpio12.gpioPin.$assign = "GPIO111";
+
+gpio13.$name           = "GPI_Emergency_Stop";
+gpio13.qualMode        = "GPIO_QUAL_ASYNC";
+gpio13.gpioPin.$assign = "GPIO22";
+
+gpio14.$name           = "GPI4";
+gpio14.direction       = "GPIO_DIR_MODE_OUT";
+gpio14.gpioPin.$assign = "GPIO61";
+
+gpio15.$name           = "GPI5";
+gpio15.direction       = "GPIO_DIR_MODE_OUT";
+gpio15.gpioPin.$assign = "GPIO66";
+
+gpio16.$name           = "GPI6";
+gpio16.direction       = "GPIO_DIR_MODE_OUT";
+gpio16.gpioPin.$assign = "GPIO131";
+
+gpio17.$name           = "GPI7";
+gpio17.direction       = "GPIO_DIR_MODE_OUT";
+gpio17.gpioPin.$assign = "GPIO130";
